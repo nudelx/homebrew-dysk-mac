@@ -1,0 +1,39 @@
+{
+  "name": "dysk-mac",
+  "version": "1.0.0",
+  "description": "A command-line disk utility for macOS that provides detailed information about mounted disks",
+  "main": "index.js",
+  "bin": {
+    "dysk-mac": "./index.js"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "disk",
+    "macos",
+    "cli",
+    "utility",
+    "storage",
+    "df",
+    "diskutil"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "cli-table3": "^0.6.3",
+    "yargs": "^17.7.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/dysk-mac.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/dysk-mac/issues"
+  },
+  "homepage": "https://github.com/yourusername/dysk-mac#readme"
+}
