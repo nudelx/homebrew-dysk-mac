@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dysk-mac - macOS Disk Utility | Command Line Tool</title>
+  <meta name="description"
+    content="Powerful command-line disk utility for macOS with emoji-enhanced output, SSD/HDD detection, and external drive support. Monitor disk usage, manage storage, and get detailed disk information.">
+  <meta name="keywords"
+    content="macOS disk utility, command line disk tool, disk usage monitor, SSD HDD detection, external drive utility, macOS storage management, disk space analyzer, Homebrew disk tool, terminal disk utility">
+  <meta name="author" content="nudelx">
+  <meta property="og:title" content="dysk-mac - macOS Disk Utility">
+  <meta property="og:description"
+    content="Powerful command-line disk utility for macOS with emoji-enhanced output and smart disk detection.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nudelx.github.io/dysk-mac/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="dysk-mac - macOS Disk Utility">
+  <meta name="twitter:description" content="Powerful command-line disk utility for macOS">
+
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .header {
+      text-align: center;
+      color: white;
+      margin-bottom: 3rem;
+    }
+
+    .header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .content {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .install-box {
+      background: #f8f9fa;
+      border: 2px solid #e9ecef;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .install-code {
+      background: #2d3748;
+      color: #e2e8f0;
+      padding: 1rem;
+      border-radius: 6px;
+      font-family: 'Monaco', 'Menlo', monospace;
+      margin: 1rem 0;
+      overflow-x: auto;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .feature {
+      background: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border-left: 4px solid #667eea;
+    }
+
+    .feature h3 {
+      color: #2d3748;
+      margin-top: 0;
+    }
+
+    .demo {
+      background: #2d3748;
+      color: #e2e8f0;
+      padding: 1.5rem;
+      border-radius: 8px;
+      font-family: 'Monaco', 'Menlo', monospace;
+      margin: 2rem 0;
+      overflow-x: auto;
+    }
+
+    .cta {
+      text-align: center;
+      margin: 3rem 0;
+    }
+
+    .cta a {
+      display: inline-block;
+      background: #667eea;
+      color: white;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .cta a:hover {
+      background: #5a67d8;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>💾 dysk-mac</h1>
+      <p>The ultimate command-line disk utility for macOS</p>
+    </div>
+
+    <div class="content">
+      <h2>🚀 Quick Installation</h2>
+      <div class="install-box">
+        <h3>Install with Homebrew</h3>
+        <div class="install-code">
+          brew tap nudelx/dysk-mac<br>
+          brew install dysk-mac
+        </div>
+        <p>Then run: <code>dysk-mac</code></p>
+      </div>
+
+      <h2>✨ Features</h2>
+      <div class="features">
+        <div class="feature">
+          <h3>📊 Comprehensive Disk Info</h3>
+          <p>View detailed information about all mounted disks with beautiful emoji-enhanced output</p>
+        </div>
+        <div class="feature">
+          <h3>🔍 Smart Detection</h3>
+          <p>Automatically detects SSD vs HDD, external drives, and removable media</p>
+        </div>
+        <div class="feature">
+          <h3>📈 Advanced Filtering</h3>
+          <p>Filter disks based on usage percentage, free space, disk type, and more</p>
+        </div>
+        <div class="feature">
+          <h3>📋 Multiple Formats</h3>
+          <p>Display as beautiful table, JSON, or CSV for data analysis</p>
+        </div>
+        <div class="feature">
+          <h3>🚨 Usage Warnings</h3>
+          <p>Visual indicators for high disk usage (⚠️ for >70%, 🚨 for >90%)</p>
+        </div>
+        <div class="feature">
+          <h3>🔌 External Drive Support</h3>
+          <p>Special handling for external SSDs and hard drives</p>
+        </div>
+      </div>
+
+      <h2>🎯 Demo Output</h2>
+      <div class="demo">
+        ┌────────────────┬────────────────────────────┬──────────────┬──────────────┬───────────┬──────────────┬─────────┬─────────────┐
+        │ 💾 Disk │ 📁 Mount │ 📊 Size (GB) │ 💻 Used (GB) │ 📈 Used % │ 💚 Free (GB) │ ⚡ Type │ 🔌 External │
+        ├────────────────┼────────────────────────────┼──────────────┼──────────────┼───────────┼──────────────┼─────────┼─────────────┤
+        │ /dev/disk3s1s1 │ / │ 460.4 │ 10.5 │ ✅ 5% │ 249.1 │ ⚡ SSD │ 🖥️ No │
+        │ /dev/disk4s2 │ Samples │ 953.7 │ 166.2 │ ✅ 18% │ 787.5 │ ⚡ SSD │ 🔌 Yes │
+        └────────────────┴────────────────────────────┴──────────────┴──────────────┴───────────┴──────────────┴─────────┴─────────────┘
+      </div>
+
+      <h2>🔧 Usage Examples</h2>
+      <div class="install-code">
+        # Basic usage<br>
+        dysk-mac<br><br>
+        # JSON output<br>
+        dysk-mac --json<br><br>
+        # Filter high usage disks<br>
+        dysk-mac --filter "usedPercent > 80"<br><br>
+        # Show only external drives<br>
+        dysk-mac --filter "external"<br><br>
+        # Sort by free space<br>
+        dysk-mac --sort free
+      </div>
+
+      <div class="cta">
+        <a href="https://github.com/nudelx/dysk-mac">View on GitHub →</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

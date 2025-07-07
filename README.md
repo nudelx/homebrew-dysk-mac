@@ -1,15 +1,35 @@
-# 💾 dysk-mac
+# 💾 dysk-mac - macOS Disk Utility
 
-A command-line disk utility for macOS that provides detailed information about mounted disks, including usage statistics, disk types, and external drive detection.
+> **The ultimate command-line disk utility for macOS** - Get detailed disk information, monitor storage usage, and manage your drives with beautiful emoji-enhanced output.
 
-## Features
+[![Homebrew](https://img.shields.io/badge/Homebrew-Installed-brightgreen.svg)](https://formulae.brew.sh/formula/dysk-mac)
+[![Node.js](https://img.shields.io/badge/Node.js-14+-green.svg)](https://nodejs.org/)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![macOS](https://img.shields.io/badge/macOS-10.15+-silver.svg)](https://www.apple.com/macos/)
 
-- 📊 **Disk Information**: View detailed information about all mounted disks
-- 🔍 **Filtering**: Filter disks based on usage percentage, free space, and other criteria
-- 📈 **Sorting**: Sort results by any disk property
-- 📋 **Multiple Output Formats**: Display as table, JSON, or CSV
+**dysk-mac** is a powerful command-line disk utility for macOS that provides detailed information about mounted disks, including usage statistics, disk types (SSD vs HDD), external drive detection, and beautiful emoji-enhanced output.
+
+## 🚀 Quick Start
+
+```bash
+# Install with Homebrew
+brew tap nudelx/dysk-mac
+brew install dysk-mac
+
+# Run the tool
+dysk-mac
+```
+
+## ✨ Features
+
+- 📊 **Comprehensive Disk Information**: View detailed information about all mounted disks with emoji-enhanced output
+- 🔍 **Advanced Filtering**: Filter disks based on usage percentage, free space, disk type, and more
+- 📈 **Flexible Sorting**: Sort results by any disk property (size, usage, free space, etc.)
+- 📋 **Multiple Output Formats**: Display as beautiful table, JSON, or CSV for data analysis
 - 💾 **Smart Detection**: Automatically detects SSD vs HDD, external drives, and removable media
-- 🎯 **macOS Optimized**: Uses native macOS `diskutil` and `df` commands
+- 🎯 **macOS Optimized**: Uses native macOS `diskutil` and `df` commands for maximum compatibility
+- 🚨 **Usage Warnings**: Visual indicators for high disk usage (⚠️ for >70%, 🚨 for >90%)
+- 🔌 **External Drive Support**: Special handling for external SSDs and hard drives
 
 <img src="https://raw.githubusercontent.com/nudelx/homebrew-dysk-mac/refs/heads/main/img/img1.png"/>
 
@@ -240,9 +260,59 @@ Quick setup:
 ### Building from Source
 
 ```bash
-git clone https://github.com/yourusername/dysk-mac.git
+git clone https://github.com/nudelx/dysk-mac.git
 cd dysk-mac
 npm install
 chmod +x index.js
 ./index.js
 ```
+
+## 🔍 Keywords & Search Terms
+
+**dysk-mac** is optimized for these search terms:
+
+- macOS disk utility
+- Command line disk tool
+- Disk usage monitor
+- SSD HDD detection
+- External drive utility
+- macOS storage management
+- Disk space analyzer
+- Homebrew disk tool
+- Terminal disk utility
+- macOS disk information
+
+## 📈 Performance & Compatibility
+
+- **Fast**: Uses native macOS commands for optimal performance
+- **Lightweight**: Minimal dependencies, small footprint
+- **Compatible**: Works on macOS 10.15+ (Catalina and later)
+- **Reliable**: Built with Node.js 14+ ES modules
+- **Secure**: No external API calls, all local processing
+
+## 🎯 Use Cases
+
+- **System Administrators**: Monitor disk usage across multiple systems
+- **Developers**: Check available space before builds or deployments
+- **Power Users**: Manage external drives and storage devices
+- **DevOps**: Integrate disk monitoring into automation scripts
+- **Data Analysts**: Export disk data for analysis and reporting
+
+## 🌟 Why Choose dysk-mac?
+
+- **Beautiful Output**: Emoji-enhanced tables for better readability
+- **Smart Detection**: Automatically identifies SSD vs HDD and external drives
+- **Flexible Filtering**: Powerful JavaScript expressions for complex queries
+- **Multiple Formats**: Table, JSON, and CSV output options
+- **Easy Installation**: Simple Homebrew installation
+- **Active Development**: Regular updates and improvements
+
+## 📞 Support & Community
+
+- **Issues**: [GitHub Issues](https://github.com/nudelx/dysk-mac/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/nudelx/dysk-mac/discussions)
+- **Contributions**: [Contributing Guide](CONTRIBUTING.md)
+
+---
+
+**Made with ❤️ for the macOS community**

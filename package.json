@@ -1,14 +1,15 @@
 {
   "name": "dysk-mac",
-  "version": "1.0.1",
-  "description": "A command-line disk utility for macOS that provides detailed information about mounted disks",
+  "version": "1.0.2",
+  "description": "A powerful command-line disk utility for macOS with emoji-enhanced output, SSD/HDD detection, and external drive support",
   "main": "index.js",
   "bin": {
     "dysk-mac": "./index.js"
   },
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "keywords": [
     "disk",
@@ -17,9 +18,19 @@
     "utility",
     "storage",
     "df",
-    "diskutil"
+    "diskutil",
+    "ssd",
+    "hdd",
+    "external-drive",
+    "disk-monitor",
+    "storage-management",
+    "command-line",
+    "terminal",
+    "disk-usage",
+    "homebrew",
+    "macos-utility"
   ],
-  "author": "Your Name",
+  "author": "nudelx",
   "license": "MIT",
   "dependencies": {
     "cli-table3": "^0.6.3",
@@ -30,10 +41,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/dysk-mac.git"
+    "url": "git+https://github.com/nudelx/dysk-mac.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/dysk-mac/issues"
+    "url": "https://github.com/nudelx/dysk-mac/issues"
   },
-  "homepage": "https://github.com/yourusername/dysk-mac#readme"
+  "homepage": "https://github.com/nudelx/dysk-mac#readme",
+  "os": [
+    "darwin"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ]
 }
