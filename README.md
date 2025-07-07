@@ -11,7 +11,7 @@ A command-line disk utility for macOS that provides detailed information about m
 - 💾 **Smart Detection**: Automatically detects SSD vs HDD, external drives, and removable media
 - 🎯 **macOS Optimized**: Uses native macOS `diskutil` and `df` commands
 
-<img src="https://raw.githubusercontent.com/nudelx/homebrew-dysk-mac/refs/heads/main/img/img.png"/>
+<img src="https://raw.githubusercontent.com/nudelx/homebrew-dysk-mac/refs/heads/main/img/img1.png"/>
 
 ## Installation
 
