@@ -1,7 +1,7 @@
 class DyskMac < Formula
   desc "A command-line disk utility for macOS that provides detailed information about mounted disks"
   homepage "https://github.com/nudelx/dysk-mac"
-  url "file://#{__dir__}/../../dysk-mac-1.0.2.tar.gz"
+  url "https://github.com/nudelx/dysk-mac/archive/refs/tags/v1.0.2.tar.gz"
   sha256 "b904a869fe7ccc420032a216bd33a4fa4cdaaf5e305b1393b87b64224e83eb71"
   license "MIT"
 
