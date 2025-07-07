@@ -38,10 +38,16 @@ export function getDisksInfo() {
 function getDiskType(device) {
   try {
     const info = execSync(`diskutil info ${device}`).toString();
+
+    // Check for Solid State with more robust regex
+    const isSSD = /Solid State:\s*Yes/.test(info);
+    const isRemovable = /Removable Media:\s*Yes/.test(info);
+    const isExternal = /Device Location:\s*External/.test(info);
+
     return {
-      type: /Solid State: Yes/.test(info) ? "SSD" : "HDD",
-      removable: /Removable Media: Yes/.test(info),
-      external: /External: Yes/.test(info),
+      type: isSSD ? "SSD" : "HDD",
+      removable: isRemovable,
+      external: isExternal,
     };
   } catch {
     return { type: "Unknown", removable: false, external: false };
