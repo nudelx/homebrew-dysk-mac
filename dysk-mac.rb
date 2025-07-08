@@ -8,18 +8,25 @@ class DyskMac < Formula
   depends_on "node"
 
   def install
-    system "npm", "install", *Language::Node.std_npm_install_args(libexec)
-    bin.install_symlink Dir["#{libexec}/bin/*"]
+    # Install npm dependencies
+    system "npm", "install"
+    
+    # Make the script executable
+    chmod "+x", "index.js"
+    
+    # Install all required files to libexec
+    libexec.install "index.js", "diskutil.js", "utils.js", "package.json", "node_modules"
     
     # Create a wrapper script
     (bin/"dysk-mac").write <<~EOS
       #!/bin/bash
-      exec "#{libexec}/bin/dysk-mac" "$@"
+      exec "#{libexec}/index.js" "$@"
     EOS
     chmod "+x", bin/"dysk-mac"
   end
 
   test do
+    # Test that the command works
     system "#{bin}/dysk-mac", "--help"
   end
 end 
